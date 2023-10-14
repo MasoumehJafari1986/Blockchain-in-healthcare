@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts\patient.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> patient.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">52% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>13/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">30.56% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>11/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">58.82% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.86% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>22/35</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+&nbsp;
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+&nbsp;
+&nbsp;
+/**
+ * @title A sample IoMT in blockchain Contract
+ * @author Masoumeh Jafari
+ * @notice This contract is for saved Internet of Medical Things (IoMT) in blockchain
+ */
+&nbsp;
+&nbsp;
+contract PatientData {
+    struct Patient {
+        string name;
+        bool isPatient;
+        string condition;
+        address owner;
+        string profile;
+        Transaction[] transactions; // Array to store the patient's transactions
+    }
+&nbsp;
+&nbsp;
+    struct Transaction {
+        uint256 id;
+        string hash; // Add any other transaction-related properties here
+    }
+&nbsp;
+    address private patient;
+    address[] private doctorAddresses;
+    mapping(address =&gt; Patient) private patients;
+    mapping(address =&gt; bool) public doctors;
+    mapping(address =&gt; Transaction[]) private patientTransactions;
+&nbsp;
+    IERC20 private feeToken; // Declare the feeToken variable to store the address of the ERC20 token contract
+    using SafeERC20 for IERC20;
+&nbsp;
+    event DoctorAdded(address indexed _doctor);
+    event DoctorListShown(address indexed caller, address[] doctors);
+    event FeeSubtracted(uint256 fee);
+    event FeeSubtractionError();
+    event InsufficientBalance();
+&nbsp;
+    constructor(address _feeToken) {
+        patient = msg.sender;
+        feeToken = IERC20(_feeToken); // Initialize the feeToken variable with the ERC20 token contract address
+    }
+&nbsp;
+    modifier onlyPatient() {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(msg.sender == patient, "Only the patient can access this function.");
+        _;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    modifier onlyDoctor() {</span>
+<span class="cstat-no" title="statement not covered" >        require(doctors[msg.sender], "Only the patient's doctors can access this function.")</span>;
+        _;
+    }
+&nbsp;
+    modifier onlyOwnerOrDoctor() {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(
+            msg.sender == patient || <span class="branch-1 cbranch-no" title="branch not covered" >doctors[msg.sender] == true</span>,
+            "Only the patient or the patient's doctors can access this function."
+        );
+        _;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function isPatientOwner(address _address) public view returns (bool) {</span>
+<span class="cstat-no" title="statement not covered" >        return _address == patients[_address].owner;</span>
+    }
+&nbsp;
+    function isDoctor(address _address) public view returns (bool) {
+        return doctors[_address];
+    }
+&nbsp;
+    function addDoctor(address _doctor) public <span class="missing-if-branch" title="else path not taken" >E</span>onlyPatient {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (!isDoctor(_doctor)) {
+            doctors[_doctor] = true;
+            doctorAddresses.push(_doctor);
+            emit DoctorAdded(_doctor);
+        }
+    }
+&nbsp;
+    function removeDoctor(address doctorAddress) public <span class="missing-if-branch" title="else path not taken" >E</span>onlyPatient {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(doctors[doctorAddress], "Doctor does not exist");
+        doctors[doctorAddress] = false;
+        for (uint256 i = 0; i &lt; doctorAddresses.length; i++) {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (doctorAddresses[i] == doctorAddress) {
+                doctorAddresses[i] = doctorAddresses[doctorAddresses.length - 1];
+                doctorAddresses.pop();
+                break;
+            }
+        }
+    }
+&nbsp;
+    function updatePatientProfile(string memory _profile) public <span class="missing-if-branch" title="else path not taken" >E</span>onlyOwnerOrDoctor {
+        patients[msg.sender].profile = _profile;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function addTransaction(string memory _transactionHash) public onlyOwnerOrDoctor {</span>
+<span class="cstat-no" title="statement not covered" >        uint256 transactionId = patients[msg.sender].transactions.length;</span>
+<span class="cstat-no" title="statement not covered" >        patients[msg.sender].transactions.push(Transaction(transactionId, _transactionHash))</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getTransactionCount() public view returns (uint256) {</span>
+<span class="cstat-no" title="statement not covered" >        return patientTransactions[msg.sender].length;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getTransactionHash(uint256 index) public view onlyOwnerOrDoctor returns (string memory) {</span>
+<span class="cstat-no" title="statement not covered" >        require(index &lt; patientTransactions[msg.sender].length, "Invalid transaction index")</span>;
+<span class="cstat-no" title="statement not covered" >        return patientTransactions[msg.sender][index].hash;</span>
+    }
+&nbsp;
+    function patientProfile() public view <span class="missing-if-branch" title="else path not taken" >E</span>onlyPatient returns (string memory) {
+        return patients[msg.sender].profile;
+    }
+&nbsp;
+    function showDoctorList() public view <span class="missing-if-branch" title="else path not taken" >E</span>onlyOwnerOrDoctor returns (address[] memory) {
+        return doctorAddresses;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getPatient(address _patient) public view returns (Patient memory) {</span>
+<span class="cstat-no" title="statement not covered" >        return patients[_patient];</span>
+    }
+&nbsp;
+&nbsp;
+    function getDoctorCount() public view returns (uint256) {
+        return doctorAddresses.length;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function transferFee(address _doctor, uint256 _amount) public onlyPatient {</span>
+<span class="cstat-no" title="statement not covered" >        require(doctors[_doctor], "Invalid doctor address")</span>;
+<span class="cstat-no" title="statement not covered" >        require(feeToken.balanceOf(msg.sender) &gt;= _amount, "Insufficient balance")</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        feeToken.safeTransferFrom(msg.sender, _doctor, _amount)</span>;
+<span class="cstat-no" title="statement not covered" >        emit FeeSubtracted(_amount);</span>
+&nbsp;
+    }
+&nbsp;
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Oct 14 2023 18:07:36 GMT+0330 (Iran Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

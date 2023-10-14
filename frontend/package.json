@@ -1,0 +1,21 @@
+{
+  "name": "patient",
+  "version": "1.0.0",
+  "description": "The IoMT data saved in blockchain.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Your Name <email@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "5",
+    "web3": "^1.6.0"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.6",
+    "chai": "^4.3.10",
+    "ethereum-waffle": "^4.0.10"
+  }
+}
