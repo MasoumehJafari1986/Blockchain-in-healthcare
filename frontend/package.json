@@ -1,21 +1,13 @@
 {
-  "name": "patient",
+  "name": "html-blockchain-in-healthcare",
   "version": "1.0.0",
-  "description": "The IoMT data saved in blockchain.",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "author": "Your Name <email@example.com>",
-  "license": "MIT",
-  "dependencies": {
-    "ethers": "5",
-    "web3": "^1.6.0"
-  },
+  "description": "",
   "devDependencies": {
-    "@nomiclabs/hardhat-ethers": "^2.2.3",
-    "@nomiclabs/hardhat-waffle": "^2.0.6",
-    "chai": "^4.3.10",
-    "ethereum-waffle": "^4.0.10"
+    "http-server": "^14.1.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@openzeppelin/contracts": "^4.4.0",
+    "@openzeppelin/hardhat-upgrades": "^1.12.0",
+    "web3": "^0.18.3"
   }
 }

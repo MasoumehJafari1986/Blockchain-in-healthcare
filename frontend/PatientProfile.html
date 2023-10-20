@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient</title>
+</head>    
+<body>
+  <p> <a href="Doctor.html"><button type="submit" class="hidden" style='margin-right:16px'>Doctor</button></a><a href="PatientProfile.html"><button type="submit" class="hidden" style='margin-right:16px'>Patient Profile</button></a><a href="TransferFee.html"><button type="submit" class="hidden" style='margin-right:16px'>Transfer Fee</button></a>
+  </p>
+    <style>
+      .mydiv {
+          background-image: url('https://s6.uupload.ir/files/download_vtav.jpg');
+          background-repeat: no-repeat;
+          width:1000px;
+          height:1000px;
+          background-size:cover;
+      }
+  </style>
+  <div class="mydiv">
+    
+  <h1>Patient</h1>
+  
+  <button id="getTransactionCountButton" onclick="getTransactionCount()">Transaction Count</button>
+
+  <p>
+    <br />
+  <!-- <form> -->
+  <label for="profile">Doctor address</label>
+  <input id="profile" placeholder="0.1" type="string"/>
+  <button type="button" id="updatePatientProfileButton" > update Patient Profile </button>
+  <!-- </form> -->
+  <br />
+  </p>
+  <p>
+    <br />
+  <!-- <form> -->
+  <label for="transactionHash">transaction Hash</label>
+  <input id="transactionHash" placeholder="0.1" type="string"/>
+  <button type="button" id="addTransactionButton" > add Transaction</button>
+  <!-- </form> -->
+  <br />
+  </p>
+
+  <p>
+    <br />
+  <!-- <form> -->
+  <label for="index">transaction index</label>
+  <input id="index" placeholder="0.1" type="uint256"/>
+  <button type="button" id="getTransactionHashButton" > Transaction Hash</button>
+  <!-- </form> -->
+  <br />
+  </p>
+ </div>
+
+  <script src="./ethers-5.6.esm.min.js"></script>
+  <script src="./constants.js"></script>
+  <script type="module" src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transfer Fee</title>
+</head>    
+<body>
+  <p> <a href="Doctor.html"><button type="submit" class="hidden" style='margin-right:16px'>Doctor</button></a><a href="PatientProfile.html"><button type="submit" class="hidden" style='margin-right:16px'>Patient Profile</button></a><a href="TransferFee.html"><button type="submit" class="hidden" style='margin-right:16px'>Transfer Fee</button></a>
+  </p>
+    <style>
+      .mydiv {
+          background-image: url('https://s6.uupload.ir/files/coin_4ajf.jpg');
+          background-repeat: no-repeat;
+          width:1000px;
+          height:1000px;
+          background-size:cover;
+      }
+  </style>
+  <div class="mydiv">
+    
+  <h1>Transfer Fee</h1>
+  
+  <p>
+    <br />
+
+    <label for="doctorAddress"> <font color="#E0FFFF">Doctor Address</font></label>
+    <input id="doctorAddress" placeholder="0x123..." type="text"/>
+    <label for="amount"><font color="#E0FFFF"> Amount</font></label>
+    <input id="amount" placeholder="0.1" type="uint256"/>
+    <button type="button" id="transferFeeButton" > Transfer Fee </button>
+    <br />
+  </p>
+ </div>
+
+  <script src="./ethers-5.6.esm.min.js"></script>
+  <script src="./constants.js"></script>
+  <script type="module" src="index.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor</title>
+</head>    
+<body>
+  <p><a href="Doctor.html"><button type="submit" class="hidden" style='margin-right:16px'>Doctor</button></a><a href="PatientProfile.html"><button type="submit" class="hidden" style='margin-right:16px'>Patient Profile</button></a><a href="TransferFee.html"><button type="submit" class="hidden" style='margin-right:16px'>Transfer Fee</button></a>
+  </p>
+    <style>
+      .mydiv {
+          background-image: url('https://s6.uupload.ir/files/doc5_h0d7.jpg');
+          background-repeat: no-repeat;
+          width:1000px;
+          height:1000px;
+          background-size:cover;
+      }
+  </style>
+  <div class="mydiv">
+
+  <h1>Doctor</h1>
+  
+  <button id="getDoctorCountButton" onclick="getDoctorCount()">Get Doctor Count</button>
+  <button id="showDoctorListButton" onclick="showDoctorList()">Show Doctor List</button>
+
+  <p>
+    <br />
+  <!-- <form> -->
+  <label for="doctorAddress">Doctor address</label>
+  <input id="doctorAddress" placeholder="0.1" type="address"/>
+  <button type="button" id="addDoctorButton" > Add Doctor </button>
+  <!-- </form> -->
+  <br />
+  </p>
+  <p>
+    <br />
+  <!-- <form> -->
+  <label for="doctorAddress">Doctor address</label>
+  <input id="doctorAddress" placeholder="0.1" type="address"/>
+  <button type="button" id="removeDoctorButton" > Remove Doctor </button>
+  <!-- </form> -->
+  <br />
+  </p>
+ </div>
+
+  <script src="./ethers-5.6.esm.min.js"></script>
+  <script src="./constants.js"></script>
+  <script type="module" src="index.js"></script>  
+ </body>
+</html>

@@ -1,76 +1,35 @@
-
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <title>Internet of Medical Things and Blockchain</title>
-    </head>
-    
-    <body>
-      <p>
-        <img src="https://imageupload.io/FmpnFVssrxrtB4r" alt="photo of IoMT" width="200" height="150">
-      </p>
-      <button id="getPatientDataButton">Get Patient Data</button>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Internet of Medical Things and Blockchain</title>
+  </head>
   
-      <p>
-        <br />
+  <body>
+    <p>
+      <img src="https://s6.uupload.ir/files/photo_of_iomt_jo7r.jpg" alt="photo of IoMT" style="float:right" width="500" height="500">
+    </p>
+    <h1>Blockchain in healthcare</h1>
+    <p>A sample blockchain in healthcare Contract</p>
 
+    <button id="DoctorButton" onclick="Doctor()">Doctor</button>
+    <button id= "PatientProfileButton" onclick="PatientProfile()">Patient Profile</button>
+    <button id="TransferFeeButton" onclick="TransferFee()">Transfer Fee</button>  
 
-      <!-- <form> -->
-      <label for="name">Patient's name</label>
-      <input id="name" type="string"/>
-      <label for="dataHash">data hash</label>
-      <input id="dataHash" type="string"/>
-      <button type="button" id="addPatientButton" > Add Patient </button>
-      <!-- </form> -->
-      <br />
-      </p>
+    <script>
+        function Doctor() {
+        window.location.href = "Doctor.html";
+        }
 
-      <p>
-        <br />
-      <!-- <form> -->
-      <label for="doctor"> doctor's address </label>
-      <input id="doctor" type="address"/>
-      <button type="button" id="authorizeDoctorButton" > Authorize Doctor </button>
-      <!-- </form> -->
-      <br />
-      </p>
+        function PatientProfile() {
+        window.location.href = "PatientProfile.html";
+        }
 
-      <p>
-        <br />
-      <!-- <form> -->
-      <label for="user">User's address</label>
-      <input id="user" type="address"/>
-      <button type="button" id="authorizeUserButton" > Authorize User </button>
-      <!-- </form> -->
-      <br />
-      </p>
-
-      <p>
-        <br />
-      <!-- <form> -->
-      <label for="Patient">Patient's address</label>
-      <input id="patient" type="address"/>
-      <label for="index">index</label>
-      <input id="index" type="uint"/>
-      <button type="button" id="authorizedDoctorsButton" > Authorized Doctors </button>
-      <!-- </form> -->
-      <br />
-      </p>
-      <p>
-        <br />
-      <!-- <form> -->
-      <label for="patient">Patient's address</label>
-      <input id="patient" type="address"/>
-      <label for="index">index</label>
-      <input id="index" type="uint"/>
-      <button type="button" id="authorizedUsersButton" > Authorized Doctors </button>
-      <!-- </form> -->
-      <br />
-      </p>
-      <script>var exports = {}</script>
-      <script src="./ethers-5.6.esm.min.js"></script>
-      <script type="module" src="./constants.js"></script>
-      <script type="module" src="./index.js"></script>
-
-    </body>
-  </html>
+        function TransferFee() {
+        window.location.href = "TransferFee.html";
+        }
+    </script> 
+    <script src="./ethers-5.6.esm.min.js"></script>
+    <script src="./constants.js"></script>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
