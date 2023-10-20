@@ -1,13 +1,12 @@
-##Blockchain in Healthcare
-*Project by Masoumeh Jafari*
-
+Blockchain in Healthcare
+Project by Masoumeh Jafari
 This code is a smart contract written in the Solidity programming language. It defines a PatientData contract that stores information about patients and their transactions using a blockchain. The contract utilizes the OpenZeppelin libraries to import the Ownable and SafeERC20 contracts. Additionally, it imports the IERC20 interface to interact with ERC20 tokens.
 The contract includes functions to add, remove, and retrieve patient data, such as profiles, transaction history, and doctor lists. A function for transferring transaction fees is also defined, utilizing the SafeERC20 library's safeTransferFrom function to ensure secure execution. Overall, this contract aims to provide a secure and transparent method for storing and sharing medical data using blockchain technology.
-
-## Getting Started
+ 
+ Getting Started
 1. Go to [Backend](./backend/) to access backend part
 2. Go to [frontend](./frontend/) to access frontend part
-2. To watch project's description video, click here > [ِWatch]( https://mega.nz/file/xusHmJwC#I0R8EoojYoSxZ7FMWUGn6OU8WBZPS7Rtrhy8T81cEpw)
+3. To watch project's description video, click here > [ِWatch]( https://mega.nz/file/xusHmJwC#I0R8EoojYoSxZ7FMWUGn6OU8WBZPS7Rtrhy8T81cEpw)
 
 Explain each function in detail: 
 1. `constructor(address _feeToken)`: 
@@ -39,7 +38,7 @@ This function returns the total number of doctors added by the patient.
 14. `transferFee(address _doctor, uint256 _amount)`: 
 This function transfers the transaction fee to a doctor's address. It takes the `_doctor` address and `_amount` as inputs and can only be called by the patient. The function checks if the doctor address is valid and if the patient has sufficient funds before transferring the amount using the SafeERC20 library's `safeTransferFrom()` function
 
-## Our Stack 
+Our Stack 
 For this project, we utilized the following stack:
 - Solidity Smart Contracts
 - IPFS for storing image data
@@ -47,12 +46,12 @@ For this project, we utilized the following stack:
 - JavaScript and HTML for our front-end development
 - MetaMask as our web3 provider
 
-## Prerequisites 
+Prerequisites 
 Before proceeding, ensure you have the following:
 1. Metamask installed
 2. Node.js installed
 
-## Steps to Deploy and Interact with the Contract in Visual Studio Code 
+Steps to Deploy and Interact with the Contract in Visual Studio Code 
 1. Install Hardhat:
 yarn add --dev hardhat
 2. Compile the smart contracts:
@@ -64,11 +63,8 @@ yarn hardhat deploy
 5. Deploy the smart contracts on Sepolia:
 yarn hardhat deploy --network sepolia
 
-## Steps to Deploy and Interact with the Contract in Remix 
+Steps to Deploy and Interact with the Contract in Remix 
 1. Copy and paste the contract code on the [Remix Ethereum IDE](https://remix.ethereum.org/).
 2. Run and deploy FeeToken (select compiler 0.8.20 or 0.8.21).
- 
 3. Set deployed-address FeeToken in Deploy segment (address_feeToken) in patient contract.
- 
-3. Run and deploy patient (select compiler 0.8.20 or 0.8.21).
- 
+4. Run and deploy patient (select compiler 0.8.20 or 0.8.21).
